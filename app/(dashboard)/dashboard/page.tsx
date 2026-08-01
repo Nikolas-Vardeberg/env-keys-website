@@ -5,6 +5,7 @@ import {Button} from "@/components/atoms";
 import {useState} from "react";
 import {Modal, ModalAction, ModalCancel, ModalContent, ModalFooter, ModalHeader, ModalTitle, ModalTrigger} from "@/components/organisms";
 import {Input} from "@/components/atoms/input/input";
+import {Textarea} from "@/components/atoms/textarea";
 
 export default function Page() {
   const [open, setOpen] = useState<boolean>(true)
@@ -16,6 +17,9 @@ export default function Page() {
       <Infobox variant="green" title="Tittel på en infobox" description="Beskrivelse av en infobox" open={open} />
 
       <Input placeholder="Søk på hele siden..." />
+
+      <Textarea  placeholder="Skriv en beskrivelse for prosjektet" />
+
 
       <Modal>
         <ModalTrigger>
